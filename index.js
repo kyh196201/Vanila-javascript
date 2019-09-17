@@ -1,18 +1,5 @@
-const samInfo = {
-  name: "Sam",
-  age: 27,
-  isHandsome: true,
-  favMovies: ["LOTR", "Jurassic Park"],
-  favFood: [
-    {
-      name: "Banana",
-      fatty: false
-    },
-    {
-      name: "Choco Pie",
-      fatty: true
-    }
-  ]
-};
+function sayHello(name, age) {
+  console.log("Hello!!", name, "you have", age, "years old.");
+}
 
-document.write(samInfo.favFood[0].name);
+sayHello("Sam", 15);
