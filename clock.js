@@ -34,11 +34,14 @@ function getTime() {
   const month = date.getMonth();
   const day = date.getDay();
 
-  clockTitle.innerHTML = `${hours}:${minutes}:${seconds},${months[month]},${week[day]}`;
+  clockTitle.innerHTML = `${hours < 10 ? `0${hours}` : hours}:${
+    minutes < 10 ? `0${minutes}` : minutes
+  }:${seconds < 10 ? `0${seconds}` : seconds},${months[month]},${week[day]}`;
 }
 
 function init() {
   getTime();
+  setInterval(getTime, 1000);
 }
 
 init();
