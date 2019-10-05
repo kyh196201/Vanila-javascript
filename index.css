@@ -7,7 +7,18 @@ body {
 }
 
 h1 {
+  color: rgb(52, 73, 94);
+
   text-align: center;
+  transition: color 0.5s ease-in-out;
+}
+
+.clicked {
+  color: #9b59b6;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 p {
