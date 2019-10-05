@@ -26,8 +26,21 @@ p {
   font-weight: bold;
 }
 
-input {
+h2 {
+  text-align: center;
+  color: blue;
+}
+
+.form,
+.input,
+.greetings {
+  display: none;
+}
+
+.showing {
   display: block;
-  border: 1px solid black;
-  margin: 0 auto;
+}
+
+.colored {
+  color: red;
 }
