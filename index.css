@@ -32,9 +32,12 @@ h2 {
 }
 
 .form,
-.input,
 .greetings {
   display: none;
+}
+
+.form {
+  text-align: center;
 }
 
 .showing {
