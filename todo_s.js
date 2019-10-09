@@ -26,23 +26,26 @@ function paintToDo(text) {
     text: text,
     id: newId
   };
+
   toDos.push(toDoObj);
-  saveToDos();
 }
 
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
   paintToDo(currentValue);
-  toDoInput.value = ""; //엔터 치면 입력한 값이 다시 사라지게 해준다.
+  toDoInput.value = "";
+  saveToDos();
 }
 
 function loadToDos() {
-  const loadedToDos = localStorage.getItem(TODOS_LS);
+  const loadedToDos = localStorage.getItem(TODOS_LS); //로컬 스토리지에 저장된 값을 불러온다.
   if (loadedToDos !== null) {
-    const parsedToDos = JSON.parse(loadedToDos);
-    parsedToDos.forEach(function(todo) {
-      paintToDo(todo.text);
+    const parsedToDos = JSON.parse(loadedToDos); // 로컬 스토리지에 스트링으로 저장된 값을 객체 형태로 변호나
+
+    //배열의 각각의 값에대해 출력후 배열에 저장
+    parsedToDos.forEach(function(something) {
+      paintToDo(something.text);
     });
   }
 }
