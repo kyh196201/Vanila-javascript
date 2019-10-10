@@ -55,3 +55,34 @@ h2 {
 .js-toDoForm .toDoInput {
   font-size: 22px;
 }
+
+@keyframes imgFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.toDoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toDoList .list-item {
+  margin-bottom: 10px;
+  color: black;
+  align-self: center;
+}
+
+.js-bgImage {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  animation: imgFadeIn 2s linear;
+}

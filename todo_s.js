@@ -76,6 +76,7 @@ function getNewId(arr) {
 function paintToDo(text) {
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
+  const div = document.createElement("div");
   delBtn.innerText = "❌";
 
   //delete버튼에 이벤튼 추가
@@ -84,9 +85,11 @@ function paintToDo(text) {
   const span = document.createElement("span");
   const newId = getNewId(toDos);
   span.innerText = text;
-  li.appendChild(delBtn);
-  li.appendChild(span);
+  div.appendChild(delBtn);
+  div.appendChild(span);
+  li.appendChild(div);
   li.id = newId;
+  div.classList.add("list-item");
   toDoList.appendChild(li);
 
   // toDos 배열에 객체 삽입.
