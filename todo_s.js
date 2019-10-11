@@ -14,7 +14,8 @@ function saveToDos() {
 
 function deleteToDos(event) {
   const btn = event.target;
-  const li = btn.parentNode;
+  const div = btn.parentNode;
+  const li = div.parentNode;
 
   toDoList.removeChild(li); //list에서 클릭된 버튼 삭제
 
